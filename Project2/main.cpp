@@ -1,22 +1,22 @@
-#include <iostream>
+п»ї#include <iostream>
 
 using namespace std;
 
 int main() {
-    int n;  // кількість чисел фібоначі
+    int n;  // РєС–Р»СЊРєС–СЃС‚СЊ С‡РёСЃРµР» С„С–Р±РѕРЅР°С‡С–
     cout << "Enter the amount of Fibonacci numbers (n > 0): ";
     cin >> n;
     if (n <= 0) {
         cout << "must be more then 0." << endl;
-        return 1; // повернення з кодом помилки
+        return 1; // РїРѕРІРµСЂРЅРµРЅРЅСЏ Р· РєРѕРґРѕРј РїРѕРјРёР»РєРё
     }
-    long long first = 0; // Перше число
-    long long second = 1; // Пруге число
+    long long first = 0; // РџРµСЂС€Рµ С‡РёСЃР»Рѕ
+    long long second = 1; // РџСЂСѓРіРµ С‡РёСЃР»Рѕ
     long long next;
 
     cout << "first " << n << " Fibonacci numbers:" << endl;
 
-    // виведення перших двох чисел
+    // РІРёРІРµРґРµРЅРЅСЏ РїРµСЂС€РёС… РґРІРѕС… С‡РёСЃРµР»
     if (n >= 1) {
         cout << first << " ";
     }
@@ -24,13 +24,13 @@ int main() {
         cout << second << " ";
     }
 
-    // цикл для решти чисел
+    // С†РёРєР» РґР»СЏ СЂРµС€С‚Рё С‡РёСЃРµР»
     for (int i = 3; i <= n; i++) {
-        next = first + second; // наступне число
+        next = first + second; // РЅР°СЃС‚СѓРїРЅРµ С‡РёСЃР»Рѕ
 
         cout << next << " ";
 
-        // оновлння змінних
+        // РѕРЅРѕРІР»РЅРЅСЏ Р·РјС–РЅРЅРёС…
         first = second;
         second = next;
     }
